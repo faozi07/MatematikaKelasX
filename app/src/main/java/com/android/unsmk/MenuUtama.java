@@ -3,7 +3,9 @@ package com.android.unsmk;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,11 +14,16 @@ import android.widget.TextView;
 
 public class MenuUtama extends AppCompatActivity {
 
+    MediaPlayer mpSound1 = new MediaPlayer();
     Button btnPlay,btnUjian;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mpSound1 = MediaPlayer.create(MenuUtama.this, R.raw.backsound);
+        mpSound1.start();
+        mpSound1.setLooping(true);
 
         btnPlay = findViewById(R.id.btnPlay);
         btnPlay.setOnClickListener(new View.OnClickListener() {

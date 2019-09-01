@@ -58,32 +58,26 @@
                 android:textSize="14sp"
                 android:textColor="#000"/>
 
-            <io.github.kexanie.library.MathView
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20sp"
-                auto:engine="KaTeX"
-                auto:text="a. |x| = a \\Leftarrow\\Rightarrow x = a atau x = -a" />
-            <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="a. |x| = a <=> x = a atau x = -a"-->
-                <!--android:textSize="14sp"-->
-                <!--android:textColor="#000"/>-->
+                android:text="a. |x| = a &lt;=&gt; x = a atau x = -a"
+                android:textSize="14sp"
+                android:textColor="#000"/>
 
-            <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="b. |x| < b <=> -a < x < a"-->
-                <!--android:textSize="14sp"-->
-                <!--android:textColor="#000"/>-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="b. |x| &lt; b &lt;=&gt; -a &lt; x &lt; a"
+                android:textSize="14sp"
+                android:textColor="#000"/>
 
-            <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="c. |x| = c <=> x < -a atau x > a"-->
-                <!--android:textSize="14sp"-->
-                <!--android:textColor="#000"/>-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="c. |x| = c &lt;=&gt; x &lt; -a atau x &gt; a"
+                android:textSize="14sp"
+                android:textColor="#000"/>
         </LinearLayout>
 
         <!--<io.github.kexanie.library.MathView-->
