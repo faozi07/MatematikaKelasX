@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background"
+    android:padding="20dp"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginBottom="10sp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/colorAccent"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:background="@drawable/background">
+
+            <TextView
+                android:id="@+id/teksJmlSoal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soal 1/10"
+                android:textSize="14sp"
+                android:textColor="@color/colorRed"/>
+            <TextView
+                android:id="@+id/teksNilai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Nilai : 100"
+                android:textSize="14sp"
+                android:textColor="@color/colorRed"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layBab2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:background="@drawable/background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sifat : Untuk a > 0 berlaku"
+                android:textSize="14sp"
+                android:textColor="#000"/>
+
+            <io.github.kexanie.library.MathView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20sp"
+                auto:engine="KaTeX"
+                auto:text="a. |x| = a \\Leftarrow\\Rightarrow x = a atau x = -a" />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="a. |x| = a <=> x = a atau x = -a"-->
+                <!--android:textSize="14sp"-->
+                <!--android:textColor="#000"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="b. |x| < b <=> -a < x < a"-->
+                <!--android:textSize="14sp"-->
+                <!--android:textColor="#000"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="c. |x| = c <=> x < -a atau x > a"-->
+                <!--android:textSize="14sp"-->
+                <!--android:textColor="#000"/>-->
+        </LinearLayout>
+
+        <!--<io.github.kexanie.library.MathView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="20sp"-->
+        <!--auto:text="When \\(a \\ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\)-->
+        <!--and they are $$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$"-->
+        <!--auto:engine="MathJax"/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30sp"
+            android:orientation="vertical"
+            android:background="@drawable/background">
+            <io.github.kexanie.library.MathView
+                android:id="@+id/mathSoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20sp"
+                auto:engine="KaTeX"
+                auto:text="Bentuk sederhana dari \\((4a)^2\\) x \\((2a)\\) = ..." />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layJwbA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10sp"
+                android:background="@drawable/background"
+                android:text="A."
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background">
+
+                <io.github.kexanie.library.MathView
+                    android:id="@+id/mathJwbA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    auto:engine="MathJax"
+                    auto:text="\\(2^2\\)" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layJwbB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10sp"
+                android:background="@drawable/background"
+                android:text="B."
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background">
+
+                <io.github.kexanie.library.MathView
+                    android:id="@+id/mathJwbB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    auto:engine="MathJax"
+                    auto:text="$${1\\over 8a}$$" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layJwbC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10sp"
+                android:background="@drawable/background"
+                android:text="C."
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background">
+
+                <io.github.kexanie.library.MathView
+                    android:id="@+id/mathJwbC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    auto:engine="MathJax"
+                    auto:text="$${1\\over 8a}$$" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layJwbD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10sp"
+                android:background="@drawable/background"
+                android:text="D."
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background">
+
+                <io.github.kexanie.library.MathView
+                    android:id="@+id/mathJwbD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    auto:engine="MathJax"
+                    auto:text="$${1\\over 8a}$$" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

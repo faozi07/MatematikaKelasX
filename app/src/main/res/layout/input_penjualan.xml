@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".InputBrgMasuk">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:orientation="vertical">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/editNoPenjualan"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:enabled="false"
+                android:hint="Nomor Penjualan"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/editTglPenjualan"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="Tgl Penjualan"
+                android:drawableEnd="@drawable/ic_calendar"/>
+        </android.support.design.widget.TextInputLayout>
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#bbb"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="NIK Karyawan"
+            android:textSize="13sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background_normal"
+            android:paddingStart="-5dp"
+            android:paddingEnd="0dp">
+            <Spinner
+                android:id="@+id/spinNik"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:padding="5dp"
+                android:entries="@array/arrSupplier"/>
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:id="@+id/editNamaKaryawan"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:enabled="false"
+                android:hint="Nama Karyawan"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#bbb"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:id="@+id/editNamaKonsumen"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:lines="1"
+                android:hint="Nama Konsumen"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:id="@+id/editNoTelpKonsumen"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:lines="1"
+                android:inputType="phone"
+                android:hint="No Telp Konsumen"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:id="@+id/editAlamatKonsumen"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:maxLines="15"
+                android:hint="Alamat Konsumen"
+                android:gravity="start"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#bbb"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Kode Barang"
+            android:textSize="13sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background_normal"
+            android:paddingStart="-5dp"
+            android:paddingEnd="0dp">
+            <Spinner
+                android:id="@+id/spinKodeBrg"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:padding="5dp"
+                android:entries="@array/arrSupplier"/>
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:id="@+id/editSupplier"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:focusable="false"
+                android:enabled="false"
+                android:inputType="number"
+                android:lines="1"
+                android:hint="Supplier"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:id="@+id/editNamaBarang"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:focusable="false"
+                android:enabled="false"
+                android:inputType="number"
+                android:lines="1"
+                android:hint="Nama Barang"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:id="@+id/editJenisBrg"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:focusable="false"
+                android:enabled="false"
+                android:inputType="number"
+                android:lines="1"
+                android:hint="Jenis Barang"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:id="@+id/editHrgSatuan"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:focusable="false"
+                android:enabled="false"
+                android:inputType="number"
+                android:lines="1"
+                android:hint="Harga Satuan Barang"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:id="@+id/editStok"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:focusable="false"
+                android:enabled="false"
+                android:inputType="number"
+                android:lines="1"
+                android:hint="Stok Barang"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#bbb"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:id="@+id/editHargaJual"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:inputType="number"
+                android:lines="1"
+                android:hint="Harga Jual"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:id="@+id/editJumlah"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="number"
+                android:lines="1"
+                android:imeOptions="actionDone"
+                android:hint="Jumlah"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:id="@+id/editTotal"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:enabled="false"
+                android:hint="Total"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnJual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="50sp"
+            android:textColor="#fff"
+            android:text="Jual" />
+    </LinearLayout>
+</ScrollView>

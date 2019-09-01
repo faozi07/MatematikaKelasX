@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Matematika Kelas X</string>
+    <string-array name="arrSupplier">
+        <item>- Pilih Supplier -</item>
+        <item>PT. Sentosa Jaya</item>
+        <item>CV. Sparepart Nusantara</item>
+        <item>PT. Oto Road</item>
+    </string-array>
+    <string-array name="arrJenisBrg">
+        <item>- Pilih Jenis Barang -</item>
+        <item>AKI Motor</item>
+        <item>Oli</item>
+        <item>Ban</item>
+        <item>Kampas dan Tali Rem</item>
+        <item>Lampu</item>
+        <item>Rantai/Belt</item>
+        <item>Busi</item>
+        <item>Karburator</item>
+        <item>Tali Gas</item>
+    </string-array>
+</resources>
