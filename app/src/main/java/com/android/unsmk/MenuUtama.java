@@ -24,6 +24,7 @@ public class MenuUtama extends AppCompatActivity {
         mpSound1 = MediaPlayer.create(MenuUtama.this, R.raw.backsound);
         mpSound1.start();
         mpSound1.setLooping(true);
+        mpSound1.setVolume(1,0);
 
         btnPlay = findViewById(R.id.btnPlay);
         btnPlay.setOnClickListener(new View.OnClickListener() {

@@ -35,6 +35,119 @@ public class SplashScreen extends AppCompatActivity {
                     loadEdit.putString("isLoadData", "true");
                     loadEdit.apply();
                     try {
+                        //  ========================================= Soal Bab 1
+                        JSONObject jsonObjects = new JSONObject();
+                        jsonObjects.put("no_soal", "bab1soal1");
+                        jsonObjects.put("soal", "Bentuk sederhana dari \\((4a)^2\\) x \\((2a)\\) = ...");
+                        jsonObjects.put("semester", "1");
+                        jsonObjects.put("bab", "1");
+                        jsonObjects.put("jawab_a", "$${-2a}$$");
+                        jsonObjects.put("jawab_b", "$${1\\over 8a}$$");
+                        jsonObjects.put("jawab_c", "$${1\\over 2a}$$");
+                        jsonObjects.put("jawab_d", "$${1\\over 4a}$$");
+                        jsonObjects.put("jawab_benar", "$${1\\over 8a}$$");
+
+
+                        JSONObject jsonObjects2 = new JSONObject();
+                        jsonObjects2.put("no_soal","bab1soal2");
+                        jsonObjects2.put("soal","Hasil dari $$4^2 \\times 32\\frac{3}{5} = ...$$");
+                        jsonObjects2.put("semester","1");
+                        jsonObjects2.put("bab","1");
+                        jsonObjects2.put("jawab_a","\\(2^2\\)");
+                        jsonObjects2.put("jawab_b","\\(2^{-2}\\)");
+                        jsonObjects2.put("jawab_c","\\(2^3\\)");
+                        jsonObjects2.put("jawab_d","\\(2^4\\)");
+                        jsonObjects2.put("jawab_benar","\\(2^4\\)");
+
+
+                        JSONObject jsonObjects3 = new JSONObject();
+                        jsonObjects3.put("no_soal","bab1soal3");
+                        jsonObjects3.put("soal","Jika a=27 dan b=32, maka nilai dari $$3(a\\frac{-1}{3}) \\times 4b\\frac{2}{5}$$adalah ...");
+                        jsonObjects3.put("semester","1");
+                        jsonObjects3.put("bab","1");
+                        jsonObjects3.put("jawab_a","-25");
+                        jsonObjects3.put("jawab_b","-16");
+                        jsonObjects3.put("jawab_c","0");
+                        jsonObjects3.put("jawab_d","16");
+                        jsonObjects3.put("jawab_benar","16");
+
+                        JSONObject jsonObjects4 = new JSONObject();
+                        jsonObjects4.put("no_soal", "bab1soal4");
+                        jsonObjects4.put("soal", "Bentuk paling sederhana dari $${{x\\over y^{-3}} + {y\\over x^{-2}}}$$dalam pangkat positif adalah ...");
+                        jsonObjects4.put("semester", "1");
+                        jsonObjects4.put("bab", "1");
+                        jsonObjects4.put("jawab_a", "xy(\\(y^{2}\\)+x)");
+                        jsonObjects4.put("jawab_b", "x(\\(xy^{3}\\)+y)");
+                        jsonObjects4.put("jawab_c", "(x\\(y^{2}\\)+\\(x^{2}\\)y)");
+                        jsonObjects4.put("jawab_d", "xy(\\(2x^{2}\\)+y)");
+                        jsonObjects4.put("jawab_benar", "xy(\\(y^{2}\\)+x)");
+
+                        JSONObject jsonObjects5 = new JSONObject();
+                        jsonObjects5.put("no_soal", "bab1soal5");
+                        jsonObjects5.put("soal", "Bentuk sederhana dari $${(a^{-1}b^2)^3 \\over a^{-9}b^3}$$ adalah ...");
+                        jsonObjects5.put("semester", "1");
+                        jsonObjects5.put("bab", "1");
+                        jsonObjects5.put("jawab_a", "\\(a^5\\)\\(b^3\\)");
+                        jsonObjects5.put("jawab_b", "\\(a^6\\)\\(b^3\\)");
+                        jsonObjects5.put("jawab_c", "\\(a^8\\)\\(b^8\\)");
+                        jsonObjects5.put("jawab_d", "\\(a^7\\)\\(b^6\\)");
+                        jsonObjects5.put("jawab_benar", "\\(a^6\\)\\(b^3\\)");
+
+                        JSONObject jsonObjects6 = new JSONObject();
+                        jsonObjects6.put("no_soal", "bab1soal6");
+                        jsonObjects6.put("soal", "$${{({2\\over3} p^2q^3)^4}\\over{(3^{-2}(pq)^4)^2}} =$$");
+                        jsonObjects6.put("semester", "1");
+                        jsonObjects6.put("bab", "1");
+                        jsonObjects6.put("jawab_a", "$${8q}{4\\over3}$$");
+                        jsonObjects6.put("jawab_b", "$${1\\over4}pq$$");
+                        jsonObjects6.put("jawab_c", "$$16q^4$$");
+                        jsonObjects6.put("jawab_d", "$${q}{4\\over16}$$");
+                        jsonObjects6.put("jawab_benar", "$$16q^4$$");
+
+                        JSONObject jsonObjects7 = new JSONObject();
+                        jsonObjects7.put("no_soal", "bab1soal7");
+                        jsonObjects7.put("soal", "Jika diketahui log x=a dan log y=b, maka $$log {{10x^3}\\over{y^2}} = ...$$");
+                        jsonObjects7.put("semester", "1");
+                        jsonObjects7.put("bab", "1");
+                        jsonObjects7.put("jawab_a", "$$10(3a-2b)$$");
+                        jsonObjects7.put("jawab_b", "$$1 + 3a - 2b$$");
+                        jsonObjects7.put("jawab_c", "$${10a^3\\over{b^2}}$$");
+                        jsonObjects7.put("jawab_d", "$${30a\\over2b}$$");
+                        jsonObjects7.put("jawab_benar", "$$10(3a-2b)$$");
+
+                        JSONObject jsonObjects8 = new JSONObject();
+                        jsonObjects8.put("no_soal", "bab1soal8");
+                        jsonObjects8.put("soal", "Nilai dari \\(^3\\) log 6 + 2. \\(^3\\) log 2 adalah ...");
+                        jsonObjects8.put("semester", "1");
+                        jsonObjects8.put("bab", "1");
+                        jsonObjects8.put("jawab_a", "0");
+                        jsonObjects8.put("jawab_b", "1");
+                        jsonObjects8.put("jawab_c", "2");
+                        jsonObjects8.put("jawab_d", "3");
+                        jsonObjects8.put("jawab_benar", "3");
+
+                        JSONObject jsonObjects9 = new JSONObject();
+                        jsonObjects9.put("no_soal", "bab1soal9");
+                        jsonObjects9.put("soal", "Jika \\(^3\\) log 5 = 1,465 dan \\(^3\\) log 7 = 1,771, maka \\(^3\\) log 105 adalah ...");
+                        jsonObjects9.put("semester", "1");
+                        jsonObjects9.put("bab", "1");
+                        jsonObjects9.put("jawab_a", "2,336");
+                        jsonObjects9.put("jawab_b", "3,227");
+                        jsonObjects9.put("jawab_c", "4,326");
+                        jsonObjects9.put("jawab_d", "5,629");
+                        jsonObjects9.put("jawab_benar", "4,326");
+
+
+                        JSONObject jsonObjects10 = new JSONObject();
+                        jsonObjects10.put("no_soal", "bab1soal10");
+                        jsonObjects10.put("soal", "Jika diketahui \\(^2\\)log 3 = x dan \\(^2\\)log 5 = y, maka $$^2log\\;45\\sqrt{15}$$ adalah ...");
+                        jsonObjects10.put("semester", "1");
+                        jsonObjects10.put("bab", "1");
+                        jsonObjects10.put("jawab_a", "$${1\\over2}(5x-3y)$$");
+                        jsonObjects10.put("jawab_b", "$${1\\over2}(5x+3y)$$");
+                        jsonObjects10.put("jawab_c", "$${1\\over2}(3x+5y)$$");
+                        jsonObjects10.put("jawab_d", "$${1\\over2}x^2{\\sqrt{x}}+y{\\sqrt{y}}$$");
+                        jsonObjects10.put("jawab_benar", "$${1\\over2}(5x+3y)$$");
 //  ========================================= Soal Bab 2
                         JSONObject jsonObject = new JSONObject();
                         jsonObject.put("no_soal", "bab2soal1");
@@ -378,6 +491,18 @@ public class SplashScreen extends AppCompatActivity {
                         jsonObject30.put("jawab_benar", "10");
 
                         DB = new DB(SplashScreen.this);
+                        // BAB 1
+                        DB.insertSoal(jsonObjects);
+                        DB.insertSoal(jsonObjects2);
+                        DB.insertSoal(jsonObjects3);
+                        DB.insertSoal(jsonObjects4);
+                        DB.insertSoal(jsonObjects5);
+                        DB.insertSoal(jsonObjects6);
+                        DB.insertSoal(jsonObjects7);
+                        DB.insertSoal(jsonObjects8);
+                        DB.insertSoal(jsonObjects9);
+                        DB.insertSoal(jsonObjects10);
+                        // BAB 2
                         DB.insertSoal(jsonObject);
                         DB.insertSoal(jsonObject2);
                         DB.insertSoal(jsonObject3);
@@ -388,6 +513,7 @@ public class SplashScreen extends AppCompatActivity {
                         DB.insertSoal(jsonObject8);
                         DB.insertSoal(jsonObject9);
                         DB.insertSoal(jsonObject10);
+                        // BAB 3
                         DB.insertSoal(jsonObject11);
                         DB.insertSoal(jsonObject12);
                         DB.insertSoal(jsonObject13);
@@ -398,6 +524,7 @@ public class SplashScreen extends AppCompatActivity {
                         DB.insertSoal(jsonObject18);
                         DB.insertSoal(jsonObject19);
                         DB.insertSoal(jsonObject20);
+                        // BAB 4
                         DB.insertSoal(jsonObject21);
                         DB.insertSoal(jsonObject22);
                         DB.insertSoal(jsonObject23);

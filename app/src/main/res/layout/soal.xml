@@ -93,13 +93,20 @@
             android:layout_marginBottom="30sp"
             android:orientation="vertical"
             android:background="@drawable/background">
+            <ImageView
+                android:id="@+id/imgSoal"
+                android:layout_width="wrap_content"
+                android:layout_height="150sp"
+                android:layout_marginBottom="10sp"
+                android:layout_gravity="center"/>
+
             <io.github.kexanie.library.MathView
                 android:id="@+id/mathSoal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20sp"
                 auto:engine="KaTeX"
-                auto:text="Bentuk sederhana dari \\((4a)^2\\) x \\((2a)\\) = ..." />
+                auto:text="Jika diketahui \\(^2\\)log 3 = x dan \\(^2\\)log 5 = y, maka $$^2log\\;45\\sqrt{15}$$ adalah ..." />
         </LinearLayout>
 
         <LinearLayout
@@ -110,6 +117,7 @@
             android:paddingTop="10sp">
 
             <TextView
+                android:id="@+id/teksA"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -121,6 +129,7 @@
                 android:textStyle="bold" />
 
             <LinearLayout
+                android:id="@+id/teksJwbA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/background">
@@ -131,7 +140,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     auto:engine="MathJax"
-                    auto:text="\\(2^2\\)" />
+                    auto:text="$${1\\over2}(5x-3y)$$" />
             </LinearLayout>
 
         </LinearLayout>
@@ -144,6 +153,7 @@
             android:paddingTop="10sp">
 
             <TextView
+                android:id="@+id/teksB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -155,6 +165,7 @@
                 android:textStyle="bold" />
 
             <LinearLayout
+                android:id="@+id/teksJwbB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/background">
@@ -165,7 +176,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     auto:engine="MathJax"
-                    auto:text="$${1\\over 8a}$$" />
+                    auto:text="$${1\\over2}(5x+3y)$$" />
             </LinearLayout>
 
         </LinearLayout>
@@ -178,6 +189,7 @@
             android:paddingTop="10sp">
 
             <TextView
+                android:id="@+id/teksC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -189,6 +201,7 @@
                 android:textStyle="bold" />
 
             <LinearLayout
+                android:id="@+id/teksJwbC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/background">
@@ -199,7 +212,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     auto:engine="MathJax"
-                    auto:text="$${1\\over 8a}$$" />
+                    auto:text="$${1\\over2}(3x+5y)$$"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -212,6 +225,7 @@
             android:paddingTop="10sp">
 
             <TextView
+                android:id="@+id/teksD"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -223,6 +237,7 @@
                 android:textStyle="bold" />
 
             <LinearLayout
+                android:id="@+id/teksJwbD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/background">
@@ -233,7 +248,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     auto:engine="MathJax"
-                    auto:text="$${1\\over 8a}$$" />
+                    auto:text="$${1\\over2}x^2{\\sqrt{x}}+y{\\sqrt{y}}$$" />
             </LinearLayout>
 
         </LinearLayout>

@@ -1,9 +1,11 @@
 package com.android.unsmk;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
@@ -28,12 +30,17 @@ public class Soal extends AppCompatActivity {
     public static String noSoal = "", jawabanBenar = "";
     public static int noSoal2 = 0, nilai = 0;
     public static MathView teksSoal, teksJawabA, teksJawabB, teksJawabC, teksJawabD;
-    LinearLayout layJwbA, layJwbB, layJwbC, layJwbD, layBab2;
+    LinearLayout layJwbA, layJwbB, layJwbC, layJwbD, layBab2, teksJwbA, teksJwbB, teksJwbC, teksJwbD;
     ImageView imgBack;
+    TextView teksA, teksB, teksC, teksD;
+    public static ImageView imgSoal;
     public static TextView teksJmlSoal, teksNilai;
     DB DB;
     public static String soal= "", jawabA= "", jawabB= "", jawabC="", jawabD="";
     public static boolean isFirst = true;
+    public static Activity act;
+    MediaPlayer mpSoundWrong = new MediaPlayer();
+    MediaPlayer mpSoundTrue = new MediaPlayer();
 
     @Override
     protected void onResume() {
@@ -80,8 +87,26 @@ public class Soal extends AppCompatActivity {
             layBab2.setVisibility(View.GONE);
         }
         imgBack = findViewById(R.id.imgBack);
+        imgSoal = findViewById(R.id.imgSoal);
         teksJmlSoal = findViewById(R.id.teksJmlSoal);
         teksNilai = findViewById(R.id.teksNilai);
+
+        teksA = findViewById(R.id.teksA);
+        teksB = findViewById(R.id.teksB);
+        teksC = findViewById(R.id.teksC);
+        teksD = findViewById(R.id.teksD);
+
+        teksJwbA = findViewById(R.id.teksJwbA);
+        teksJwbB = findViewById(R.id.teksJwbB);
+        teksJwbC = findViewById(R.id.teksJwbC);
+        teksJwbD = findViewById(R.id.teksJwbD);
+
+        mpSoundWrong = MediaPlayer.create(Soal.this, R.raw.wrong);
+        mpSoundWrong.setVolume(30,30);
+
+        mpSoundTrue = MediaPlayer.create(Soal.this, R.raw.trues);
+        mpSoundTrue.setVolume(30,30);
+        act = this;
     }
 
     private void action() {
@@ -99,15 +124,28 @@ public class Soal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SoundBtn.soundBtn(Soal.this);
-                if (noSoal2 < 10) {
-                    String noSoals = noSoal.substring(0, noSoal.length()-1);
-                    DB.loadSoalByNoSoal(noSoals+(noSoal2+1));
-                    if (teksJawabA.getText().equals(jawabanBenar)) {
-                        nilai = nilai+20;
-                        teksNilai.setText("Nilai : "+nilai);
-                    }
-                } else {
-                    showDialog();
+                if (teksJawabA.getText().equals(jawabanBenar)) {
+                    nilai = nilai+10;
+                    teksNilai.setText("Nilai : "+nilai);
+                    teksA.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
+                    teksJwbA.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
+                    setBg(teksA, teksJwbA);
+                    mpSoundTrue.start();
+                }
+                else {
+                    teksA.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_salah));
+                    teksJwbA.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_salah));
+                    setBg(teksA, teksJwbA);
+                    mpSoundWrong.start();
+                }
+
+                if (noSoal2 >= 10) {
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            showDialog();
+                        }
+                    },1000);
                 }
             }
         });
@@ -115,15 +153,27 @@ public class Soal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SoundBtn.soundBtn(Soal.this);
-                if (noSoal2 < 10) {
-                    String noSoals = noSoal.substring(0, noSoal.length()-1);
-                    DB.loadSoalByNoSoal(noSoals+(noSoal2+1));
-                    if (teksJawabB.getText().equals(jawabanBenar)) {
-                        nilai = nilai+20;
-                        teksNilai.setText("Nilai : "+nilai);
-                    }
-                } else {
-                    showDialog();
+                if (teksJawabB.getText().equals(jawabanBenar)) {
+                    nilai = nilai+10;
+                    teksNilai.setText("Nilai : "+nilai);
+                    teksB.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
+                    teksJwbB.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
+                    setBg(teksB, teksJwbB);
+                    mpSoundTrue.start();
+                }
+                else {
+                    teksB.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_salah));
+                    teksJwbB.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_salah));
+                    setBg(teksB, teksJwbB);
+                    mpSoundWrong.start();
+                }
+                if (noSoal2 >= 10) {
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            showDialog();
+                        }
+                    },1000);
                 }
             }
         });
@@ -132,16 +182,28 @@ public class Soal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SoundBtn.soundBtn(Soal.this);
-                if (noSoal2 < 10) {
-                    String noSoals = noSoal.substring(0, noSoal.length()-1);
-                    DB.loadSoalByNoSoal(noSoals+(noSoal2+1));
+                if (teksJawabC.getText().equals(jawabanBenar)) {
+                    nilai = nilai+10;
+                    teksNilai.setText("Nilai : "+nilai);
+                    teksC.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
+                    teksJwbC.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
+                    setBg(teksC, teksJwbC);
+                    mpSoundTrue.start();
+                }
+                else {
+                    teksC.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_salah));
+                    teksJwbC.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_salah));
+                    setBg(teksC, teksJwbC);
+                    mpSoundWrong.start();
+                }
 
-                    if (teksJawabC.getText().equals(jawabanBenar)) {
-                        nilai = nilai+20;
-                        teksNilai.setText("Nilai : "+nilai);
-                    }
-                } else {
-                    showDialog();
+                if (noSoal2 >= 10) {
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            showDialog();
+                        }
+                    },1000);
                 }
             }
         });
@@ -150,20 +212,44 @@ public class Soal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SoundBtn.soundBtn(Soal.this);
-                if (noSoal2 < 10) {
-                    String noSoals = noSoal.substring(0, noSoal.length()-1);
-                    DB.loadSoalByNoSoal(noSoals+(noSoal2+1));
+                if (teksJawabD.getText().equals(jawabanBenar)) {
+                    nilai = nilai+10;
+                    teksNilai.setText("Nilai : "+nilai);
+                    teksD.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
+                    teksJwbD.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
+                    setBg(teksD, teksJwbD);
+                    mpSoundTrue.start();
+                }
+                else {
+                    teksD.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_salah));
+                    teksJwbD.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_salah));
+                    setBg(teksD, teksJwbD);
+                    mpSoundWrong.start();
+                }
 
-                    if (teksJawabD.getText().equals(jawabanBenar)) {
-                        nilai = nilai+20;
-                        teksNilai.setText("Nilai : "+nilai);
-                    }
-                } else {
-                    showDialog();
+                if (noSoal2 >= 10) {
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            showDialog();
+                        }
+                    },1000);
                 }
             }
         });
         teksNilai.setText("Nilai : "+nilai);
+    }
+
+    private void setBg(final TextView teks, final LinearLayout layTeks) {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                String noSoals = noSoal.substring(0, noSoal.length()-1);
+                DB.loadSoalByNoSoal(noSoals+(noSoal2+1));
+                teks.setBackground(getResources().getDrawable(R.drawable.background));
+                layTeks.setBackground(getResources().getDrawable(R.drawable.background));
+            }
+        },1000);
     }
 
     public static void setTextSoal(String soal, String jawabA, String jawabB, String jawabC, String jawabD) {
@@ -179,6 +265,21 @@ public class Soal extends AppCompatActivity {
         teksJawabB.setText(jawabB);
         teksJawabC.setText(jawabC);
         teksJawabD.setText(jawabD);
+        if (noSoal.contains("bab4") && noSoal2==4) {
+            imgSoal.setVisibility(View.VISIBLE);
+            imgSoal.setImageDrawable(act.getResources().getDrawable(R.drawable.img_bab4_soal4));
+        } else if (noSoal.contains("bab4") && noSoal2==5) {
+            imgSoal.setVisibility(View.VISIBLE);
+            imgSoal.setImageDrawable(act.getResources().getDrawable(R.drawable.img_bab4_soal5));
+        } else if (noSoal.contains("bab4") && noSoal2==7) {
+            imgSoal.setVisibility(View.VISIBLE);
+            imgSoal.setImageDrawable(act.getResources().getDrawable(R.drawable.img_bab4_soal7));
+        } else if (noSoal.contains("bab4") && noSoal2==9) {
+            imgSoal.setVisibility(View.VISIBLE);
+            imgSoal.setImageDrawable(act.getResources().getDrawable(R.drawable.img_bab4_soal9));
+        } else {
+            imgSoal.setVisibility(View.GONE);
+        }
     }
 
     private void showDialog(){
