@@ -42,16 +42,6 @@ public class DB extends SQLiteOpenHelper {
     private static final String JUMLAH = "JUMLAH";
     private static final String TOTAL = "TOTAL";
 
-    // ================================================ INVENTORY ======================================
-    private static final String TABLE_NAME_PENJUALAN = "penjualan";
-    private static final String NO_PENJUALAN = "NO_PENJUALAN";
-    private static final String TGL_PENJUALAN = "TGL_PENJUALAN";
-    private static final String NAMA_KONSUMEN = "NAMA_KONSUMEN";
-    private static final String NO_TELP_KONSUMEN = "NO_TELP_KONSUMEN";
-    private static final String ALAMAT_KONSUMEN = "ALAMAT_KONSUMEN";
-    private static final String HARGA_JUAL = "HARGA_JUAL";
-
-
     // ================================================ SOAL ======================================
     private static final String TABLE_SOAL = "TABLE_SOAL";
     private static final String NO_SOAL = "NO_SOAL";
@@ -196,6 +186,34 @@ public class DB extends SQLiteOpenHelper {
         }
         db.close();
     }
+
+    @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
+    public void loadSoalUjian(String bab) {
+        SQLiteDatabase db = getWritableDatabase();
+        @SuppressLint("Recycle")
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_SOAL + " WHERE "+ BAB+"='"+bab+"' ORDER BY RANDOM() LIMIT 5;", null);
+        if (cursor.moveToFirst()) {
+            do {
+                try {
+                    modelSoal modelSoal = new modelSoal();
+                    modelSoal.setNosoal(cursor.getString(0));
+                    modelSoal.setSoal(cursor.getString(1));
+                    modelSoal.setJawabA(cursor.getString(4));
+                    modelSoal.setJawabB(cursor.getString(5));
+                    modelSoal.setJawabC(cursor.getString(6));
+                    modelSoal.setJawabD(cursor.getString(7));
+                    modelSoal.setJawabBenar(cursor.getString(8));
+                    modelSoal.setBab(bab);
+                    SoalUjian.arrSoalUjian.add(modelSoal);
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+            } while (cursor.moveToNext());
+        }
+        db.close();
+    }
+
 
     @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
     public void cekUserAll() {

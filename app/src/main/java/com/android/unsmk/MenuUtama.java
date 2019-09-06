@@ -31,7 +31,7 @@ public class MenuUtama extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SoundBtn.soundBtn(MenuUtama.this);
-                startActivity(new Intent(MenuUtama.this, PilihSemester.class));
+                startActivity(new Intent(MenuUtama.this, KategoriSoal.class));
             }
         });
         btnUjian = findViewById(R.id.btnUjian);
@@ -39,7 +39,7 @@ public class MenuUtama extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SoundBtn.soundBtn(MenuUtama.this);
-//                startActivity(new Intent(MenuUtama.this, Penjualan.class));
+                startActivity(new Intent(MenuUtama.this, SoalUjian.class));
             }
         });
     }

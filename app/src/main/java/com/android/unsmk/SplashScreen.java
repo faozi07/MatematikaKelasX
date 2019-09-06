@@ -29,7 +29,18 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
                 SharedPreferences spLoadData = getSharedPreferences(StaticVars.SP_LOGIN, MODE_PRIVATE);
                 if (spLoadData.getString("isLoadData","").equals("true")) {
-                    startActivity(new Intent(SplashScreen.this, MenuUtama.class));
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            DB = new DB(SplashScreen.this);
+                            DB.loadSoalUjian("1");
+                            DB.loadSoalUjian("2");
+                            DB.loadSoalUjian("3");
+                            DB.loadSoalUjian("4");
+                            startActivity(new Intent(SplashScreen.this, MenuUtama.class));
+                        }
+                    },1000);
                 } else {
                     SharedPreferences.Editor loadEdit = spLoadData.edit();
                     loadEdit.putString("isLoadData", "true");
@@ -536,13 +547,21 @@ public class SplashScreen extends AppCompatActivity {
                         DB.insertSoal(jsonObject29);
                         DB.insertSoal(jsonObject30);
 
-
-                        startActivity(new Intent(SplashScreen.this, MenuUtama.class));
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                DB.loadSoalUjian("1");
+                                DB.loadSoalUjian("2");
+                                DB.loadSoalUjian("3");
+                                DB.loadSoalUjian("4");
+                                startActivity(new Intent(SplashScreen.this, MenuUtama.class));
+                            }
+                        },1000);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 }
             }
-        }, 2000);
+        }, 1000);
     }
 }

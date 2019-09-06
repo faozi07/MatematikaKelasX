@@ -34,7 +34,7 @@ public class Soal extends AppCompatActivity {
     ImageView imgBack;
     TextView teksA, teksB, teksC, teksD;
     public static ImageView imgSoal;
-    public static TextView teksJmlSoal, teksNilai;
+    public static TextView teksJmlSoal, teksNilai, teksTimer;
     DB DB;
     public static String soal= "", jawabA= "", jawabB= "", jawabC="", jawabD="";
     public static boolean isFirst = true;
@@ -74,6 +74,8 @@ public class Soal extends AppCompatActivity {
         teksJawabB = findViewById(R.id.mathJwbB);
         teksJawabC = findViewById(R.id.mathJwbC);
         teksJawabD = findViewById(R.id.mathJwbD);
+        teksTimer = findViewById(R.id.teksTimer);
+        teksTimer.setVisibility(View.GONE);
 
         layJwbA = findViewById(R.id.layJwbA);
         layJwbB = findViewById(R.id.layJwbB);

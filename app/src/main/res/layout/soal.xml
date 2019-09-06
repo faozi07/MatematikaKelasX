@@ -13,13 +13,29 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="10dp">
-        <ImageView
-            android:id="@+id/imgBack"
-            android:layout_width="30sp"
-            android:layout_height="30sp"
-            android:layout_marginBottom="10sp"
-            android:src="@drawable/ic_back"
-            android:tint="@color/colorAccent"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginBottom="10sp"
+                android:src="@drawable/ic_back"
+                android:tint="@color/colorAccent"/>
+            <TextView
+                android:id="@+id/teksTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/background2"
+                android:text="10.00"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:textAlignment="center"/>
+        </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -31,8 +31,7 @@ public class KategoriSoal extends AppCompatActivity {
     public static boolean isSmt1 = false;
 
     TextView teksKategori1, teksKategori2, teksKategori3, teksKategori4;
-    LinearLayout layKat1,layKat2, layKat3, layKat4;
-    ImageView imgBack;
+    ImageView imgBack, imgCat1, imgCat2, imgCat3, imgCat4, imgCat5, imgCat6, imgCat7, imgCat8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,17 +42,33 @@ public class KategoriSoal extends AppCompatActivity {
     }
 
     private void init() {
-        layKat1 = findViewById(R.id.layKat1);
-        layKat2 = findViewById(R.id.layKat2);
-        layKat3 = findViewById(R.id.layKat3);
-        layKat4 = findViewById(R.id.layKat4);
 
-        teksKategori1 = findViewById(R.id.teksKategori1);
-        teksKategori2 = findViewById(R.id.teksKategori2);
-        teksKategori3 = findViewById(R.id.teksKategori3);
-        teksKategori4 = findViewById(R.id.teksKategori4);
+//        teksKategori1 = findViewById(R.id.teksKategori1);
+//        teksKategori2 = findViewById(R.id.teksKategori2);
+//        teksKategori3 = findViewById(R.id.teksKategori3);
+//        teksKategori4 = findViewById(R.id.teksKategori4);
 
         imgBack = findViewById(R.id.imgBack);
+        imgCat1 = findViewById(R.id.imgCat1);
+        imgCat2 = findViewById(R.id.imgCat2);
+        imgCat3 = findViewById(R.id.imgCat3);
+        imgCat4 = findViewById(R.id.imgCat4);
+        imgCat5 = findViewById(R.id.imgCat5);
+        imgCat6 = findViewById(R.id.imgCat6);
+        imgCat7 = findViewById(R.id.imgCat7);
+        imgCat8 = findViewById(R.id.imgCat8);
+
+//        if (isSmt1) {
+//             imgCat1.setImageDrawable(getResources().getDrawable(R.drawable.bab1));
+//            imgCat2.setImageDrawable(getResources().getDrawable(R.drawable.bab2));
+//            imgCat3.setImageDrawable(getResources().getDrawable(R.drawable.bab3));
+//            imgCat4.setImageDrawable(getResources().getDrawable(R.drawable.bab4));
+//        } else {
+//            imgCat1.setImageDrawable(getResources().getDrawable(R.drawable.bab5));
+//            imgCat2.setImageDrawable(getResources().getDrawable(R.drawable.bab6));
+//            imgCat3.setImageDrawable(getResources().getDrawable(R.drawable.bab3));
+//            imgCat4.setImageDrawable(getResources().getDrawable(R.drawable.bab4));
+//        }
     }
 
     private void action() {
@@ -64,74 +79,90 @@ public class KategoriSoal extends AppCompatActivity {
             }
         });
 
-        layKat1.setOnClickListener(new View.OnClickListener() {
+        imgCat1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isSmt1) {
-                    Soal.noSoal = "bab1soal1";
-                    startActivity(new Intent(KategoriSoal.this, Soal.class));
-                }
-                else {
-                    Soal.noSoal = "bab5soal1";
-                }
+                Soal.noSoal = "bab1soal1";
+                startActivity(new Intent(KategoriSoal.this, Soal.class));
                 SoundBtn.soundBtn(KategoriSoal.this);
             }
         });
 
-        layKat2.setOnClickListener(new View.OnClickListener() {
+        imgCat2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isSmt1) {
-                    Soal.noSoal = "bab2soal1";
-                    startActivity(new Intent(KategoriSoal.this, Soal.class));
-                }
-                else {
-                    Soal.noSoal = "bab6soal1";
-                }
+                Soal.noSoal = "bab2soal1";
+                startActivity(new Intent(KategoriSoal.this, Soal.class));
                 SoundBtn.soundBtn(KategoriSoal.this);
             }
         });
 
-        layKat3.setOnClickListener(new View.OnClickListener() {
+        imgCat3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isSmt1) {
-                    Soal.noSoal = "bab3soal1";
-                    startActivity(new Intent(KategoriSoal.this, Soal.class));
-                }
-                else {
-                    Soal.noSoal = "bab7soal1";
-                }
+                Soal.noSoal = "bab3soal1";
+                startActivity(new Intent(KategoriSoal.this, Soal.class));
                 SoundBtn.soundBtn(KategoriSoal.this);
             }
         });
 
-        layKat4.setOnClickListener(new View.OnClickListener() {
+        imgCat4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isSmt1) {
-                    Soal.noSoal = "bab4soal1";
-                    startActivity(new Intent(KategoriSoal.this, Soal.class));
-                }
-                else {
-                    Soal.noSoal = "bab8soal1";
-                }
+                Soal.noSoal = "bab4soal1";
+                startActivity(new Intent(KategoriSoal.this, Soal.class));
                 SoundBtn.soundBtn(KategoriSoal.this);
             }
         });
 
-        if (isSmt1) {
-            teksKategori1.setText(katSmt1[0]);
-            teksKategori2.setText(katSmt1[1]);
-            teksKategori3.setText(katSmt1[2]);
-            teksKategori4.setText(katSmt1[3]);
-        }
-        else {
-            teksKategori1.setText(katSmt2[0]);
-            teksKategori2.setText(katSmt2[1]);
-            teksKategori3.setText(katSmt2[2]);
-            teksKategori4.setText(katSmt2[3]);
-        }
+        imgCat5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Soal.noSoal = "bab5soal1";
+//                startActivity(new Intent(KategoriSoal.this, Soal.class));
+                SoundBtn.soundBtn(KategoriSoal.this);
+            }
+        });
+
+        imgCat6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Soal.noSoal = "bab6soal1";
+//                startActivity(new Intent(KategoriSoal.this, Soal.class));
+                SoundBtn.soundBtn(KategoriSoal.this);
+            }
+        });
+
+        imgCat7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Soal.noSoal = "bab7soal1";
+//                startActivity(new Intent(KategoriSoal.this, Soal.class));
+                SoundBtn.soundBtn(KategoriSoal.this);
+            }
+        });
+
+        imgCat8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Soal.noSoal = "bab8soal1";
+//                startActivity(new Intent(KategoriSoal.this, Soal.class));
+                SoundBtn.soundBtn(KategoriSoal.this);
+            }
+        });
+
+//        if (isSmt1) {
+//            teksKategori1.setText(katSmt1[0]);
+//            teksKategori2.setText(katSmt1[1]);
+//            teksKategori3.setText(katSmt1[2]);
+//            teksKategori4.setText(katSmt1[3]);
+//        }
+//        else {
+//            teksKategori1.setText(katSmt2[0]);
+//            teksKategori2.setText(katSmt2[1]);
+//            teksKategori3.setText(katSmt2[2]);
+//            teksKategori4.setText(katSmt2[3]);
+//        }
     }
 
     @Override
