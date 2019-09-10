@@ -116,13 +116,34 @@
                 android:layout_marginBottom="10sp"
                 android:layout_gravity="center"/>
 
+            <!--<io.github.kexanie.library.MathView-->
+                <!--android:id="@+id/mathSoal"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="20sp"-->
+                <!--auto:engine="KaTeX"-->
+                <!--auto:text="Diketahui matriks-->
+                <!--$${-->
+                <!--A=\\begin{pmatrix}2&amp;3 \\\\ 3&amp;4 \\end{pmatrix}-->
+                <!--}$$-->
+                <!--$${-->
+                <!--dan\\;B=\\begin{pmatrix}-1&amp;0 \\\\ 1&amp;2 \\end{pmatrix}.-->
+                <!--}$$-->
+                <!--Jika AC=B, maka determinan matriks C adalah = ..." />-->
+
             <io.github.kexanie.library.MathView
                 android:id="@+id/mathSoal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20sp"
                 auto:engine="KaTeX"
-                auto:text="Jika diketahui \\(^2\\)log 3 = x dan \\(^2\\)log 5 = y, maka $$^2log\\;45\\sqrt{15}$$ adalah ..." />
+                auto:text="Nilai x-y dari sistem persamaan linear $${
+                  \\begin{cases}
+                    2x-3y=-4\\\\
+                    x+2y=5
+                  \\end{cases}
+                }$$ Adalah ..." />
+
         </LinearLayout>
 
         <LinearLayout
@@ -156,7 +177,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     auto:engine="MathJax"
-                    auto:text="$${1\\over2}(5x-3y)$$" />
+                    auto:text="$${\\begin{pmatrix}6 \\\\ 11 \\\\ -8 \\end{pmatrix}}$$" />
             </LinearLayout>
 
         </LinearLayout>

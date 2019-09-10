@@ -7,6 +7,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.kosalgeek.android.photoutil.MainActivity;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -38,6 +40,10 @@ public class SplashScreen extends AppCompatActivity {
                             DB.loadSoalUjian("2");
                             DB.loadSoalUjian("3");
                             DB.loadSoalUjian("4");
+                            DB.loadSoalUjian("5");
+                            DB.loadSoalUjian("6");
+                            DB.loadSoalUjian("7");
+                            DB.loadSoalUjian("8");
                             startActivity(new Intent(SplashScreen.this, MenuUtama.class));
                         }
                     },1000);
@@ -177,7 +183,7 @@ public class SplashScreen extends AppCompatActivity {
                         jsonObject2.put("semester", "1");
                         jsonObject2.put("bab", "2");
                         jsonObject2.put("jawab_a", "{7 < x < 5}");
-                        jsonObject2.put("jawab_b", "{-3 > x > 4}\n");
+                        jsonObject2.put("jawab_b", "{-3 > x > 4}");
                         jsonObject2.put("jawab_c", "{-4 > x > -3}");
                         jsonObject2.put("jawab_d", "{-3 < x < 4}");
                         jsonObject2.put("jawab_benar", "{-3 < x < 4}");
@@ -502,7 +508,7 @@ public class SplashScreen extends AppCompatActivity {
                         jsonObject30.put("jawab_benar", "10");
 
                         DB = new DB(SplashScreen.this);
-                        // BAB 1
+//                         BAB 1
                         DB.insertSoal(jsonObjects);
                         DB.insertSoal(jsonObjects2);
                         DB.insertSoal(jsonObjects3);
@@ -546,6 +552,7 @@ public class SplashScreen extends AppCompatActivity {
                         DB.insertSoal(jsonObject28);
                         DB.insertSoal(jsonObject29);
                         DB.insertSoal(jsonObject30);
+                        MenuUtama.soalSmt2(SplashScreen.this);
 
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -554,6 +561,10 @@ public class SplashScreen extends AppCompatActivity {
                                 DB.loadSoalUjian("2");
                                 DB.loadSoalUjian("3");
                                 DB.loadSoalUjian("4");
+                                DB.loadSoalUjian("5");
+                                DB.loadSoalUjian("6");
+                                DB.loadSoalUjian("7");
+                                DB.loadSoalUjian("8");
                                 startActivity(new Intent(SplashScreen.this, MenuUtama.class));
                             }
                         },1000);

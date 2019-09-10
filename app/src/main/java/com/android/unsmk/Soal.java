@@ -132,6 +132,9 @@ public class Soal extends AppCompatActivity {
                     teksA.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
                     teksJwbA.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
                     setBg(teksA, teksJwbA);
+                    if (mpSoundTrue.isPlaying()) {
+                        mpSoundTrue.stop();
+                    }
                     mpSoundTrue.start();
                 }
                 else {
@@ -161,6 +164,9 @@ public class Soal extends AppCompatActivity {
                     teksB.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
                     teksJwbB.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
                     setBg(teksB, teksJwbB);
+                    if (mpSoundTrue.isPlaying()) {
+                        mpSoundTrue.stop();
+                    }
                     mpSoundTrue.start();
                 }
                 else {
@@ -190,6 +196,9 @@ public class Soal extends AppCompatActivity {
                     teksC.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
                     teksJwbC.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
                     setBg(teksC, teksJwbC);
+                    if (mpSoundTrue.isPlaying()) {
+                        mpSoundTrue.stop();
+                    }
                     mpSoundTrue.start();
                 }
                 else {
@@ -220,6 +229,9 @@ public class Soal extends AppCompatActivity {
                     teksD.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
                     teksJwbD.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
                     setBg(teksD, teksJwbD);
+                    if (mpSoundTrue.isPlaying()) {
+                        mpSoundTrue.stop();
+                    }
                     mpSoundTrue.start();
                 }
                 else {

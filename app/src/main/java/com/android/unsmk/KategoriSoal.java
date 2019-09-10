@@ -119,7 +119,7 @@ public class KategoriSoal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Soal.noSoal = "bab5soal1";
-//                startActivity(new Intent(KategoriSoal.this, Soal.class));
+                startActivity(new Intent(KategoriSoal.this, Soal.class));
                 SoundBtn.soundBtn(KategoriSoal.this);
             }
         });
@@ -128,7 +128,7 @@ public class KategoriSoal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Soal.noSoal = "bab6soal1";
-//                startActivity(new Intent(KategoriSoal.this, Soal.class));
+                startActivity(new Intent(KategoriSoal.this, Soal.class));
                 SoundBtn.soundBtn(KategoriSoal.this);
             }
         });
@@ -137,7 +137,7 @@ public class KategoriSoal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Soal.noSoal = "bab7soal1";
-//                startActivity(new Intent(KategoriSoal.this, Soal.class));
+                startActivity(new Intent(KategoriSoal.this, Soal.class));
                 SoundBtn.soundBtn(KategoriSoal.this);
             }
         });
@@ -146,7 +146,7 @@ public class KategoriSoal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Soal.noSoal = "bab8soal1";
-//                startActivity(new Intent(KategoriSoal.this, Soal.class));
+                startActivity(new Intent(KategoriSoal.this, Soal.class));
                 SoundBtn.soundBtn(KategoriSoal.this);
             }
         });

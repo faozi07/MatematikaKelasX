@@ -26,7 +26,8 @@ public class SoalUjian extends AppCompatActivity {
 
     public static boolean isRegistered = false, registerSukses = false;
     public static String noSoal = "", jawabanBenar = "", bab = "";
-    public static int noSoal2 = 0, nilai = 0;
+    public static int noSoal2 = 0;
+    public static Double nilai = 0d;
     public static MathView teksSoal, teksJawabA, teksJawabB, teksJawabC, teksJawabD;
     LinearLayout layJwbA, layJwbB, layJwbC, layJwbD, layBab2, teksJwbA, teksJwbB, teksJwbC, teksJwbD;
     ImageView imgBack;
@@ -141,7 +142,7 @@ public class SoalUjian extends AppCompatActivity {
                 SoundBtn.soundBtn(SoalUjian.this);
                 finish();
                 noSoal2 = 0;
-                nilai = 0;
+                nilai = 0d;
                 isFirst = true;
                 countDownTimer.cancel();
             }
@@ -151,7 +152,7 @@ public class SoalUjian extends AppCompatActivity {
             public void onClick(View v) {
                 SoundBtn.soundBtn(SoalUjian.this);
 
-                if (noSoal2 >= 19) {
+                if (noSoal2 >= 39) {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -160,7 +161,7 @@ public class SoalUjian extends AppCompatActivity {
                     },1000);
                 } else {
                     if (teksJawabA.getText().equals(jawabanBenar)) {
-                        nilai = nilai+5;
+                        nilai = nilai+2.5d;
                         teksNilai.setText("Nilai : "+nilai);
                         teksA.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
                         teksJwbA.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
@@ -181,7 +182,7 @@ public class SoalUjian extends AppCompatActivity {
             public void onClick(View v) {
                 SoundBtn.soundBtn(SoalUjian.this);
 
-                if (noSoal2 >= 19) {
+                if (noSoal2 >= 39) {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -190,7 +191,7 @@ public class SoalUjian extends AppCompatActivity {
                     },1000);
                 } else {
                     if (teksJawabB.getText().equals(jawabanBenar)) {
-                        nilai = nilai+5;
+                        nilai = nilai+2.5d;
                         teksNilai.setText("Nilai : "+nilai);
                         teksB.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
                         teksJwbB.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
@@ -212,7 +213,7 @@ public class SoalUjian extends AppCompatActivity {
             public void onClick(View v) {
                 SoundBtn.soundBtn(SoalUjian.this);
 
-                if (noSoal2 >= 19) {
+                if (noSoal2 >= 39) {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -221,7 +222,7 @@ public class SoalUjian extends AppCompatActivity {
                     },1000);
                 } else {
                     if (teksJawabC.getText().equals(jawabanBenar)) {
-                        nilai = nilai+5;
+                        nilai = nilai+2.5d;
                         teksNilai.setText("Nilai : "+nilai);
                         teksC.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
                         teksJwbC.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
@@ -242,7 +243,7 @@ public class SoalUjian extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SoundBtn.soundBtn(SoalUjian.this);
-                if (noSoal2 >= 19) {
+                if (noSoal2 >= 39) {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -251,7 +252,7 @@ public class SoalUjian extends AppCompatActivity {
                     },1000);
                 } else {
                     if (teksJawabD.getText().equals(jawabanBenar)) {
-                        nilai = nilai+5;
+                        nilai = nilai+2.5d;
                         teksNilai.setText("Nilai : "+nilai);
                         teksD.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
                         teksJwbD.setBackground(getResources().getDrawable(R.drawable.bg_jawaban_benar));
@@ -287,7 +288,7 @@ public class SoalUjian extends AppCompatActivity {
 //                } else {
 
                 noSoal2 = noSoal2+1;
-                if (noSoal2 <= 20) {
+                if (noSoal2 <= 40) {
                     modelSoal modelSoal = arrSoalUjian.get(noSoal2);
                     noSoal = modelSoal.getNosoal();
                     jawabanBenar = modelSoal.getJawabBenar();
@@ -307,7 +308,7 @@ public class SoalUjian extends AppCompatActivity {
     }
 
     public static void setTextSoal(String soal, String jawabA, String jawabB, String jawabC, String jawabD) {
-        teksJmlSoal.setText("Soal "+(noSoal2+1)+" /20");
+        teksJmlSoal.setText("Soal "+(noSoal2+1)+" /40");
         teksSoal.setText(soal);
         teksJawabA.setText(jawabA);
         teksJawabB.setText(jawabB);
@@ -342,7 +343,7 @@ public class SoalUjian extends AppCompatActivity {
                         SoundBtn.soundBtn(SoalUjian.this);
                         finish();
                         noSoal2 = 0;
-                        nilai = 0;
+                        nilai = 0d;
                         isFirst = true;
                         countDownTimer.cancel();
                     }
@@ -356,7 +357,7 @@ public class SoalUjian extends AppCompatActivity {
     public void onBackPressed() {
         finish();
         noSoal2 = 0;
-        nilai = 0;
+        nilai = 0d;
         isFirst = true;
         countDownTimer.cancel();
         SoundBtn.soundBtn(SoalUjian.this);
